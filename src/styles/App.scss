@@ -1,0 +1,126 @@
+$background: #fff;
+$fontfamily: "Poppins", sans-serif;
+
+%input-props {
+  padding: 10px;
+  border-radius: 4px;
+}
+%form-props {
+  background-color: #fff;
+}
+%button-props {
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 15px;
+  top: 5px;
+}
+%li-props {
+  border: 1px solid silver;
+  border-radius: 5px;
+  background-color: #fff;
+}
+%list-props {
+  color: black;
+  font-size: 14px;
+  font-family: Georgia, Times, serif;
+  margin-right: 35px;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: $background;
+  font-family: $fontfamily;
+}
+.container {
+  justify-content: center;
+  margin: 0 auto;
+  background-color: white;
+  max-width: 500px;
+  min-height: 900px;
+}
+.App {
+  padding: 50px;
+  text-align: center;
+}
+.Post {
+  .someText {
+    display: block;
+  }
+  .name {
+    font-size: 30px;
+    color: #fff;
+  }
+  textarea {
+    @extend %input-props;
+    flex-basis: 50%;
+    overflow: scroll;
+    width: 500px;
+    font-family: $fontfamily;
+  }
+  .save {
+    position: relative;
+    padding-top: 1px;
+    height: 30px;
+    @extend %button-props;
+    background-color: #fff;
+    font-family: $fontfamily;
+  }
+  .TagSearch {
+    @extend %form-props;
+    flex-basis: 70%;
+    display: block;
+    margin-top: 20px;
+    margin-left: 85px;
+    max-width: 330px;
+  }
+
+  .tagButton {
+    @extend %button-props;
+    flex-direction: column;
+    justify-content: center;
+    height: 5px;
+    margin: 5px;
+    background-color: #fff;
+    font-family: $fontfamily;
+  }
+  .listBox {
+    @extend %list-props;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-position: inside;
+    list-style-type: upper-roman;
+    .notes {
+      @extend %li-props;
+      margin: 20px;
+      padding: 20px;
+      .delNote {
+        margin: 40px 10px 0px 10px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+      .changeNote {
+        margin: 40px 10px 0px 10px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+  .containerNote {
+    @extend %list-props;
+    display: inline-flex;
+    flex-direction: row;
+    list-style-type: none;
+    flex-wrap: wrap;
+    .tags {
+      @extend %li-props;
+      padding: 10px;
+      margin: 3px;
+    }
+    .delTag {
+      margin-top: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+  }
+}
