@@ -5,6 +5,6 @@
 
 - name: Unzip static files
   unarchive:
-    src: "https://github.com/daniglyk/test/raw/refs/heads/main/static.zip"
+    src: "https://github.com/daniglyk/task/raw/refs/heads/main/static.zip"
     dest: "/var/www/html/images"
     remote_src: yes
