@@ -1,0 +1,14 @@
+- name: creating user
+  user:
+    name: "{{ name }}"
+    shell: "{{ shell }}"
+    state: "{{ state }}"
+    password: "{{ password }}"
+  loop:
+   - "{{ groups }}"
+
+- name: add public-key
+  authorized_key:
+    user: "{{ name }}"
+    key: "{{ public_key }}"
+    state: present

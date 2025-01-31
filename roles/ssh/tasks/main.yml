@@ -1,0 +1,19 @@
+- name: Disable login
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: "PermitRootLogin no"
+    state: present
+
+#- name: X11Forwarding       ?????
+#  vars:
+#    sshd_match:
+#        - Condition: "Group xusers"
+#          X11Forwarding: true
+
+- name: Enable password auth
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication'
+    line: "PasswordAuthentication no"
+    state: present

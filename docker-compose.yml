@@ -1,0 +1,9 @@
+version: '2'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2020:22"
+      - "80:80"

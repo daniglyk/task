@@ -1,0 +1,16 @@
+packages:
+  - htop
+  - ncdu
+  - git
+  - nano
+  - unzip
+
+
+
+name: zsh
+shell: /bin/zsh
+state: present
+public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCRptOdSIxuNrE5+Lp6tg73t5zbXxyBNFePCS7RCKZecWCM0R3vybHdZu75p1cvH07E7c8VXJBpwa9GMKfsq+ycHT0/Fq2p6jv2QCJIZdAQOCAzx/JLtxjq2fTnvKMQB4rSWFc/px3EKtllXa0hDIlnhYVmBAnrTZptyelzkuZYahAoBm0j2XfYfSnr9KlyrcfPmcGp5yR/z1ZBLrBMlUwI46KlUq0VDMJSTefp/omxZfxZleUNrdJAUy+pFWyOU9UTLXgNrmrBy2x4gBwwW7QPtHyit/AMKVohMXI9T80Yd+9rVDtPOCeH+pLa0q3hH1w+kg5+UvXPpve1zcMwQi2t  zsh@test"
+password: "zsh"
+groups: zsh
+

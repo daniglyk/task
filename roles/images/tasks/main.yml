@@ -1,0 +1,10 @@
+- name: create directory
+  file:
+    path: "/var/www/html/images"
+    state: directory
+
+- name: Unzip static files
+  unarchive:
+    src: "https://github.com/daniglyk/test/raw/refs/heads/main/static.zip"
+    dest: "/var/www/html/images"
+    remote_src: yes

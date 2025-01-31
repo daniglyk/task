@@ -1,0 +1,10 @@
+- hosts: test
+  become:
+    true
+  roles:
+    - nginx
+    - ssh
+    - zsh
+    - packages
+    - users
+    - images
