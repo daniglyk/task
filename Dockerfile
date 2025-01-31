@@ -12,6 +12,6 @@ RUN apt-get install sudo \
     && echo "test ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/test \
     && chmod 0440 /etc/sudoers.d/test
 
-EXPOSE 22
+EXPOSE 80 22
 
 CMD ["/usr/sbin/sshd", "-D"]
