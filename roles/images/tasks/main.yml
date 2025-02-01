@@ -3,8 +3,14 @@
     path: "/var/www/html/images"
     state: directory
 
-- name: Unzip static files
-  unarchive:
-    src: "https://github.com/daniglyk/task/raw/refs/heads/main/static.zip"
+- name: copy files
+  copy:
+    src: "./templates/static.zip"
     dest: "/var/www/html/images"
+
+- name: Unzip files
+  unarchive:
+    src: "/var/www/html/images/static.zip"
+    dest: "/var/www/html/images/"
     remote_src: yes
+
